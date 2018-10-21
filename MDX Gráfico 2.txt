@@ -1,0 +1,3 @@
+select NON EMPTY {[Measures].[texto]} ON COLUMNS,
+  NON EMPTY Hierarchize(Union({[Asignatura].[All Asignaturas]}, [Asignatura].[All Asignaturas].Children)) ON ROWS
+from [uah]

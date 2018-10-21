@@ -1,0 +1,3 @@
+select NON EMPTY {[Measures].[elipse], [Measures].[rectangulo]} ON COLUMNS,
+  NON EMPTY Hierarchize(Union({[Zona].[All Zonas]}, [Zona].[All Zonas].Children)) ON ROWS
+from [uah]
